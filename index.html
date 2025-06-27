@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Quiz</title>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#022954] font-['Poppins'] text-[#022954]">
+
+  <!-- Countdown screen -->
+  <div id="countdown-screen" class="fixed inset-0 flex items-center justify-center bg-[#022954] z-50 hidden">
+    <h1 class="text-white text-5xl font-bold" id="countdown-text">3</h1>
+  </div>
+
+  <!-- App Container -->
+  <div id="app">
+    <!-- Score Modal -->
+    <div id="score-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-40">
+      <div class="bg-white p-6 rounded-2xl max-w-md text-center">
+        <h2 id="score-message" class="text-xl font-semibold mb-4 text-[#022954]">Your Score</h2>
+        <div id="review-container" class="mb-4"></div>
+        <button id="play-again" class="bg-[#022954] text-white px-4 py-2 rounded-xl hover:bg-[#1a3d7c] transition">Play Again</button>
+      </div>
+    </div>
+
+    <div class="bg-[#ced4e3] w-[90%] max-w-xl mx-auto mt-24 p-8 rounded-3xl shadow-md">
+
+      <!-- Welcome Screen -->
+      <div id="welcome-screen" class="text-center">
+        <h1 class="text-2xl font-bold text-[#354c7c] border-b-2 border-[#354c7c] pb-6">Welcome to the Quiz!</h1>
+        <p class="mt-4 text-[#022954]">Test your knowledge with 5 fun questions. Are you ready?</p>
+        <button id="start-btn" class="mt-6 bg-[#022954] text-white px-6 py-2 rounded-full hover:bg-[#1a3d7c] transition">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div class="quiz hidden pt-6" id="quiz-screen">
+        <div id="question-timer" class="text-right text-sm text-red-500 font-semibold mb-2"></div>
+        <h2 id="question" class="text-lg font-semibold text-[#022954]">Question</h2>
+        <div id="answer-btns" class="mt-4"></div>
+        <button id="next-btn" class="mt-6 bg-[#022954] text-white px-6 py-2 rounded-full hover:bg-[#1a3d7c] transition">Next</button>
+      </div>
+    </div>
+
+    <h4 id="watermark" class="text-white text-center mt-12">By Akshaj Deepak</h4>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
